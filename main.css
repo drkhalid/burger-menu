@@ -1,0 +1,165 @@
+.wrapper {
+  width: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 50px;
+  background: black;
+  color: white;
+  font-size: 2em;
+}
+
+ul {
+  margin: 0;
+}
+ol {
+  margin: 0 3% 3% 3%;
+  list-style: none;
+}
+
+ol li {
+  margin-bottom: 2%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  margin: 0;
+  list-style: none;
+}
+ul li {
+  margin: 0 10px;
+}
+
+nav:first-child {
+  margin: 0 0 0 5px;
+}
+
+.menu {
+  position: relative;
+  left: -18.9%;
+  background: wheat;
+  width: 17.7%;
+  padding: 0 10px 0 0;
+}
+
+.burmenu {
+  animation: 350ms linear 0s 1 forwards menubar;
+  position: absolute;
+  height: 100%;
+}
+
+@keyframes menubar {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 17.5%;
+  }
+}
+
+.reburmenu {
+  animation: 350ms linear 0s 1 forwards remenubar;
+  position: absolute;
+  height: 100%;
+}
+
+@keyframes remenubar {
+  from {
+    margin-left: 17.5%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+.main {
+  animation: 410ms linear 0s 1 forwards main;
+  position: absolute;
+  right: 0px;
+}
+
+@keyframes main {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 83%;
+  }
+}
+
+.remain {
+  animation: 410ms linear 0s 1 forwards remain;
+  position: absolute;
+  right: 0px;
+}
+
+@keyframes remain {
+  from {
+    width: 83%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  @keyframes main {
+    from {
+      width: 83%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes remain {
+    from {
+      width: 83%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  .menu {
+    position: relative;
+    left: -40.9%;
+    background: wheat;
+    width: 37.7%;
+    padding: 0 10px 0 0;
+  }
+
+  @keyframes menubar {
+    from {
+      margin-left: 0%;
+    }
+    to {
+      margin-left: 37.5%;
+    }
+  }
+
+  .navline {
+    animation: 410ms linear 0s 1 forwards navbutton;
+    position: absolute;
+    left: 36%;
+  }
+
+  @keyframes navbutton {
+    from {
+      left: 0%;
+    }
+    to {
+      left: 36%;
+    }
+  }
+}
